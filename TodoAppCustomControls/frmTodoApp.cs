@@ -19,8 +19,8 @@ namespace TodoAppCustomControls
             // refreshes the list box with the newest contacts
             fpTasks.Controls.Clear();
 
-            //var orderTasks = NewTask.OrderBy(TaskToDo => TaskToDo.Due);
-            foreach (TaskToDo newtask in NewTask)
+            var orderTasks = NewTask.OrderBy(TaskToDo => TaskToDo.Due);
+            foreach (TaskToDo newtask in orderTasks)
             {
                 var item = new TaskControl(newtask);
                 item.Parent = this;
