@@ -37,7 +37,7 @@
             lblTask = new Label();
             gbTodo = new GroupBox();
             lblClickTo = new Label();
-            lbTasks = new ListBox();
+            fpTasks = new FlowLayoutPanel();
             gbCreate.SuspendLayout();
             gbTodo.SuspendLayout();
             SuspendLayout();
@@ -113,8 +113,8 @@
             // gbTodo
             // 
             gbTodo.Anchor = AnchorStyles.Bottom;
+            gbTodo.Controls.Add(fpTasks);
             gbTodo.Controls.Add(lblClickTo);
-            gbTodo.Controls.Add(lbTasks);
             gbTodo.Location = new Point(14, 171);
             gbTodo.Name = "gbTodo";
             gbTodo.Size = new Size(406, 348);
@@ -131,15 +131,12 @@
             lblClickTo.TabIndex = 1;
             lblClickTo.Text = "Click to Complete Tasks";
             // 
-            // lbTasks
+            // fpTasks
             // 
-            lbTasks.FormattingEnabled = true;
-            lbTasks.ItemHeight = 15;
-            lbTasks.Location = new Point(6, 45);
-            lbTasks.Name = "lbTasks";
-            lbTasks.Size = new Size(394, 289);
-            lbTasks.TabIndex = 0;
-            lbTasks.Click += lbTasks_Click;
+            fpTasks.Location = new Point(6, 37);
+            fpTasks.Name = "fpTasks";
+            fpTasks.Size = new Size(394, 305);
+            fpTasks.TabIndex = 2;
             // 
             // frmTodoApp
             // 
@@ -173,6 +170,6 @@
         private Button btnClear;
         private Button btnAdd;
         private Label lblClickTo;
-        private ListBox lbTasks;
+        private FlowLayoutPanel fpTasks;
     }
 }

@@ -17,14 +17,15 @@ namespace TodoAppCustomControls
         public void UpdateTaskListBox()
         {
             // refreshes the list box with the newest contacts
-            lbTasks.Items.Clear();
+            //lbTasks.Items.Clear();
 
-            // reorders the list
-            var orderTasks = NewTask.OrderBy(TaskToDo => TaskToDo.Due);
-            foreach (TaskToDo newtask in orderTasks)
-            {
-                lbTasks.Items.Add(newtask);
-            }
+            //var orderTasks = NewTask.OrderBy(TaskToDo => TaskToDo.Due);
+            //foreach (TaskToDo newtask in orderTasks)
+            //{
+            //    lbTasks.Items.Add(newtask);
+            //}
+
+            // TODO: create a new task control
         }
 
         public void AddTaskToDo(
@@ -42,21 +43,21 @@ namespace TodoAppCustomControls
         {
         }
 
-        private void lbTasks_Click(object sender, EventArgs e)
-        {
-            #pragma warning disable CS8600
-            TaskToDo selectedObj = (TaskToDo)lbTasks.SelectedItem;
-            #pragma warning restore CS8600
+        //private void lbTasks_Click(object sender, EventArgs e)
+        //{
+        //    #pragma warning disable CS8600
+        //    TaskToDo selectedObj = (TaskToDo)lbTasks.SelectedItem;
+        //    #pragma warning restore CS8600
 
-            // removes item from list upon click
-            // refreshes task list box
-            if (selectedObj != null)
-            {
-                MessageBox.Show($"TASK COMPLETE - {selectedObj.Task}");
-                NewTask.Remove(selectedObj);
-                UpdateTaskListBox();
-            }
-        }
+        //    if (selectedObj != null)
+        //    {
+        //        MessageBox.Show($"TASK COMPLETE - {selectedObj.Task}");
+        //        NewTask.Remove(selectedObj);
+        //        UpdateTaskListBox();
+        //    }
+        //}
+
+        // TODO: do I even need this?
 
         private void ClearForm()
         {
