@@ -124,12 +124,16 @@
             // 
             // fpTasks
             // 
+            fpTasks.AutoScroll = true;
             fpTasks.AutoSize = true;
+            fpTasks.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            fpTasks.Dock = DockStyle.Fill;
             fpTasks.FlowDirection = FlowDirection.TopDown;
-            fpTasks.Location = new Point(6, 37);
+            fpTasks.Location = new Point(3, 19);
             fpTasks.Name = "fpTasks";
-            fpTasks.Size = new Size(394, 305);
+            fpTasks.Size = new Size(400, 326);
             fpTasks.TabIndex = 2;
+            fpTasks.WrapContents = false;
             // 
             // lblClickTo
             // 
