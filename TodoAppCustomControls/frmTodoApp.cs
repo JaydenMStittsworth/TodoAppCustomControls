@@ -17,13 +17,13 @@ namespace TodoAppCustomControls
         public void UpdateTaskListBox()
         {
             // refreshes the list box with the newest contacts
-            //lbTasks.Items.Clear();
+            fpTasks.Controls.Clear();
 
             //var orderTasks = NewTask.OrderBy(TaskToDo => TaskToDo.Due);
-            //foreach (TaskToDo newtask in orderTasks)
-            //{
-            //    lbTasks.Items.Add(newtask);
-            //}
+            foreach (TaskToDo newtask in NewTask)
+            {
+                fpTasks.Controls.Add(new TaskControl());
+            }
 
             // TODO: create a new task control
         }

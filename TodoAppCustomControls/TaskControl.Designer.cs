@@ -73,7 +73,7 @@
             // 
             // btnMarkDone
             // 
-            btnMarkDone.Location = new Point(268, 6);
+            btnMarkDone.Location = new Point(298, 6);
             btnMarkDone.Name = "btnMarkDone";
             btnMarkDone.Size = new Size(75, 23);
             btnMarkDone.TabIndex = 4;
@@ -90,7 +90,7 @@
             Controls.Add(lblTask);
             Controls.Add(lblDueDate);
             Name = "TaskControl";
-            Size = new Size(356, 60);
+            Size = new Size(384, 60);
             ResumeLayout(false);
             PerformLayout();
         }

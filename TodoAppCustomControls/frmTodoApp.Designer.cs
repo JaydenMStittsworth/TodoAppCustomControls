@@ -36,8 +36,8 @@
             txtTask = new TextBox();
             lblTask = new Label();
             gbTodo = new GroupBox();
-            lblClickTo = new Label();
             fpTasks = new FlowLayoutPanel();
+            lblClickTo = new Label();
             gbCreate.SuspendLayout();
             gbTodo.SuspendLayout();
             SuspendLayout();
@@ -122,6 +122,15 @@
             gbTodo.TabStop = false;
             gbTodo.Text = "Tasks to do";
             // 
+            // fpTasks
+            // 
+            fpTasks.AutoSize = true;
+            fpTasks.FlowDirection = FlowDirection.TopDown;
+            fpTasks.Location = new Point(6, 37);
+            fpTasks.Name = "fpTasks";
+            fpTasks.Size = new Size(394, 305);
+            fpTasks.TabIndex = 2;
+            // 
             // lblClickTo
             // 
             lblClickTo.AutoSize = true;
@@ -130,13 +139,6 @@
             lblClickTo.Size = new Size(132, 15);
             lblClickTo.TabIndex = 1;
             lblClickTo.Text = "Click to Complete Tasks";
-            // 
-            // fpTasks
-            // 
-            fpTasks.Location = new Point(6, 37);
-            fpTasks.Name = "fpTasks";
-            fpTasks.Size = new Size(394, 305);
-            fpTasks.TabIndex = 2;
             // 
             // frmTodoApp
             // 
