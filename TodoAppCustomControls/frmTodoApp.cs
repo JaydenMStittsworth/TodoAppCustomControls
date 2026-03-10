@@ -22,7 +22,9 @@ namespace TodoAppCustomControls
             //var orderTasks = NewTask.OrderBy(TaskToDo => TaskToDo.Due);
             foreach (TaskToDo newtask in NewTask)
             {
-                fpTasks.Controls.Add(new TaskControl(newtask));
+                var item = new TaskControl(newtask);
+                item.Parent = this;
+                fpTasks.Controls.Add(item);
             }
 
             // TODO: create a new task control
@@ -42,22 +44,6 @@ namespace TodoAppCustomControls
         private void frmTodoApp_Load(object sender, EventArgs e)
         {
         }
-
-        //private void lbTasks_Click(object sender, EventArgs e)
-        //{
-        //    #pragma warning disable CS8600
-        //    TaskToDo selectedObj = (TaskToDo)lbTasks.SelectedItem;
-        //    #pragma warning restore CS8600
-
-        //    if (selectedObj != null)
-        //    {
-        //        MessageBox.Show($"TASK COMPLETE - {selectedObj.Task}");
-        //        NewTask.Remove(selectedObj);
-        //        UpdateTaskListBox();
-        //    }
-        //}
-
-        // TODO: do I even need this?
 
         private void ClearForm()
         {

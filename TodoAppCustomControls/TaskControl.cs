@@ -22,5 +22,17 @@ namespace TodoAppCustomControls
             lblDataDueDate.Text = TaskDetails.Due.ToShortDateString();
             lblDataTask.Text = TaskDetails.Task;
         }
+
+        private void btnMarkDone_Click(object sender, EventArgs e)
+        {
+            var frm = this.Parent?.Parent?.Parent as frmTodoApp;
+
+            if (frm != null)
+            {
+                MessageBox.Show($"TASK COMPLETE - {lblDataTask.Text}");
+                frm.NewTask.Remove(TaskDetails);
+                frm.UpdateTaskListBox();
+            }
+        }
     }
 }

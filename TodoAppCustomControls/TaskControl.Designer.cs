@@ -79,6 +79,7 @@
             btnMarkDone.TabIndex = 4;
             btnMarkDone.Text = "Mark Done";
             btnMarkDone.UseVisualStyleBackColor = true;
+            btnMarkDone.Click += btnMarkDone_Click;
             // 
             // TaskControl
             // 
