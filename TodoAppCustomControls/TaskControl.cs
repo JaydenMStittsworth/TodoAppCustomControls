@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace TodoAppCustomControls
 {
-    public partial class TaskControl: UserControl
+    public partial class TaskControl : UserControl
     {
-        public TaskControl()
+        public TaskToDo TaskDetails { get; set; }
+        public TaskControl(TaskToDo taskDetails)
         {
             InitializeComponent();
+            TaskDetails = taskDetails;
+
+            // fill in all of the details on the control using data
+            lblDataDueDate.Text = TaskDetails.Due.ToShortDateString();
+            lblDataTask.Text = TaskDetails.Task;
         }
     }
 }

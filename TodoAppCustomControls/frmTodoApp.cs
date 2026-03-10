@@ -22,7 +22,7 @@ namespace TodoAppCustomControls
             //var orderTasks = NewTask.OrderBy(TaskToDo => TaskToDo.Due);
             foreach (TaskToDo newtask in NewTask)
             {
-                fpTasks.Controls.Add(new TaskControl());
+                fpTasks.Controls.Add(new TaskControl(newtask));
             }
 
             // TODO: create a new task control
